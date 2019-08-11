@@ -1,0 +1,10 @@
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\bin\GestionarUsuarioService.dll.config
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\bin\GestionarUsuarioService.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\bin\GestionarUsuarioService.pdb
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\bin\EVP.Libreria.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\bin\EVP.Libreria.pdb
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\obj\Debug\GestionarUsuarioService.csprojAssemblyReference.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\obj\Debug\GestionarUsuarioService.csproj.CoreCompileInputs.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\obj\Debug\GestionarUsuarioService.csproj.CopyComplete
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\obj\Debug\GestionarUsuarioService.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarUsuarioService\obj\Debug\GestionarUsuarioService.pdb

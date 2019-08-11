@@ -1,0 +1,7 @@
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\UsuarioService\bin\UsuarioService.dll.config
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\UsuarioService\bin\UsuarioService.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\UsuarioService\bin\UsuarioService.pdb
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\UsuarioService\obj\Debug\UsuarioService.csprojAssemblyReference.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\UsuarioService\obj\Debug\UsuarioService.csproj.CoreCompileInputs.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\UsuarioService\obj\Debug\UsuarioService.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\UsuarioService\obj\Debug\UsuarioService.pdb

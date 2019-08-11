@@ -1,0 +1,10 @@
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\bin\GestionarCredencialService.dll.config
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\bin\GestionarCredencialService.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\bin\GestionarCredencialService.pdb
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\bin\EVP.Libreria.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\bin\EVP.Libreria.pdb
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\obj\Debug\GestionarCredencialService.csprojAssemblyReference.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\obj\Debug\GestionarCredencialService.csproj.CoreCompileInputs.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\obj\Debug\GestionarCredencialService.csproj.CopyComplete
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\obj\Debug\GestionarCredencialService.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarCredencialService\obj\Debug\GestionarCredencialService.pdb

@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="GestionarAsistenteService.Valoracion"
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory"  CodeBehind="Valoracion.svc.cs" %>

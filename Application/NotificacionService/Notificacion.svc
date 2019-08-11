@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="NotificacionService.Notificacion" CodeBehind="Notificacion.svc.cs"
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

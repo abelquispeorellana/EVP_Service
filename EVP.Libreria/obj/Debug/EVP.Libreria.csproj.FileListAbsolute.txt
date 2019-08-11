@@ -1,0 +1,6 @@
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\EVP.Libreria\bin\Debug\EVP.Libreria.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\EVP.Libreria\bin\Debug\EVP.Libreria.pdb
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\EVP.Libreria\obj\Debug\EVP.Libreria.csprojAssemblyReference.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\EVP.Libreria\obj\Debug\EVP.Libreria.csproj.CoreCompileInputs.cache
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\EVP.Libreria\obj\Debug\EVP.Libreria.dll
+D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\EVP.Libreria\obj\Debug\EVP.Libreria.pdb

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="GestionarPublicidadService.Pagina" CodeBehind="Pagina.svc.cs" %>
