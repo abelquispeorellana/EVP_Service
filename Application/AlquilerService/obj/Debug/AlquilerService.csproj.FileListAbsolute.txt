@@ -1,7 +1,0 @@
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\AlquilerService\bin\AlquilerService.dll.config
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\AlquilerService\bin\AlquilerService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\AlquilerService\bin\AlquilerService.pdb
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\AlquilerService\obj\Debug\AlquilerService.csprojAssemblyReference.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\AlquilerService\obj\Debug\AlquilerService.csproj.CoreCompileInputs.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\AlquilerService\obj\Debug\AlquilerService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\AlquilerService\obj\Debug\AlquilerService.pdb

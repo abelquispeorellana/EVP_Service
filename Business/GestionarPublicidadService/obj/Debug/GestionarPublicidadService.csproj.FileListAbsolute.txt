@@ -1,7 +1,0 @@
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarPublicidadService\bin\GestionarPublicidadService.dll.config
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarPublicidadService\bin\GestionarPublicidadService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarPublicidadService\bin\GestionarPublicidadService.pdb
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarPublicidadService\obj\Debug\GestionarPublicidadService.csprojAssemblyReference.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarPublicidadService\obj\Debug\GestionarPublicidadService.csproj.CoreCompileInputs.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarPublicidadService\obj\Debug\GestionarPublicidadService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Business\GestionarPublicidadService\obj\Debug\GestionarPublicidadService.pdb

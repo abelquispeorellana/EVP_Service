@@ -1,7 +1,0 @@
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\EstacionamientoService\bin\EstacionamientoService.dll.config
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\EstacionamientoService\bin\EstacionamientoService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\EstacionamientoService\bin\EstacionamientoService.pdb
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\EstacionamientoService\obj\Debug\EstacionamientoService.csprojAssemblyReference.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\EstacionamientoService\obj\Debug\EstacionamientoService.csproj.CoreCompileInputs.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\EstacionamientoService\obj\Debug\EstacionamientoService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\EstacionamientoService\obj\Debug\EstacionamientoService.pdb

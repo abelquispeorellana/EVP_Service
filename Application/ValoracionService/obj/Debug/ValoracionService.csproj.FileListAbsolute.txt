@@ -1,7 +1,0 @@
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\ValoracionService\bin\ValoracionService.dll.config
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\ValoracionService\bin\ValoracionService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\ValoracionService\bin\ValoracionService.pdb
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\ValoracionService\obj\Debug\ValoracionService.csprojAssemblyReference.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\ValoracionService\obj\Debug\ValoracionService.csproj.CoreCompileInputs.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\ValoracionService\obj\Debug\ValoracionService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\ValoracionService\obj\Debug\ValoracionService.pdb

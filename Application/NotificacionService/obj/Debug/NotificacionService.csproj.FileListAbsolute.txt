@@ -1,7 +1,0 @@
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\NotificacionService\bin\NotificacionService.dll.config
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\NotificacionService\bin\NotificacionService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\NotificacionService\bin\NotificacionService.pdb
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\NotificacionService\obj\Debug\NotificacionService.csprojAssemblyReference.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\NotificacionService\obj\Debug\NotificacionService.csproj.CoreCompileInputs.cache
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\NotificacionService\obj\Debug\NotificacionService.dll
-D:\MegaAsync\Sincronización\Universidad\Marlon\EVP\EVP_2\Application\NotificacionService\obj\Debug\NotificacionService.pdb
