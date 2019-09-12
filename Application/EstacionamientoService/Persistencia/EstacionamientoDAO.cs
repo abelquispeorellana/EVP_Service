@@ -131,6 +131,8 @@ namespace EstacionamientoService.Persistencia
                                 Telefono = (string)resultado["Telefono"],
                                 Dimencion = (string)resultado["Dimencion"],
                                 PrecioHora = (decimal)resultado["PrecioHora"],
+                                ImagenLogo = (int)resultado["ImagenLogo"],
+                                ImagenPortada = (int)resultado["ImagenPortada"],
                             });
                         }
                     }

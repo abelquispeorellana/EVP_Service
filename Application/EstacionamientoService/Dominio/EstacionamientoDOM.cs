@@ -20,6 +20,10 @@ namespace EstacionamientoService.Dominio
         public decimal PrecioHora { get; set; }
         [DataMember]
         public string Dimencion { get; set; }
+        [DataMember]
+        public int ImagenPortada { get; set; }
+        [DataMember]
+        public int ImagenLogo { get; set; }
 
     }
 }
