@@ -1,12 +1,8 @@
 ﻿using GestionarEstacionamientoService.Dominio;
 using GestionarEstacionamientoService.Errores;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
 
 namespace GestionarEstacionamientoService
 {
@@ -19,8 +15,12 @@ namespace GestionarEstacionamientoService
         EstacionamientoDOM Crear(EstacionamientoDOM Parametro);
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "Estacionamiento/{IdUsuario}", ResponseFormat = WebMessageFormat.Json)]
-        EstacionamientoDOM Obtener(string IdUsuario);
+        [WebInvoke(Method = "GET", UriTemplate = "Estacionamiento/{PrecioPorHora}", ResponseFormat = WebMessageFormat.Json)]
+        List<EstacionamientoDOM> Obtener(string PrecioPorHora);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "EstacionamientoPorUsuario/{IdUsuario}", ResponseFormat = WebMessageFormat.Json)]
+        List<EstacionamientoDOM> ObtenerPorUsuario(string IdUsuario);
 
         [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "Estacionamiento", ResponseFormat = WebMessageFormat.Json)]

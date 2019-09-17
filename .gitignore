@@ -3,3 +3,21 @@
 ################################################################################
 
 /.vs
+/Application/AdministradorService/obj
+/Application/AlquilerService/obj
+/Application/AlquilerService/Properties/PublishProfiles
+/Application/EstacionamientoService/obj
+/Application/EstacionamientoService/Properties/PublishProfiles
+/Application/NotificacionService/obj
+/Application/UsuarioService/obj
+/Application/UsuarioService/Properties/PublishProfiles
+/Application/ValoracionService/obj
+/Business/GestionarAsistenteService/bin
+/Business/GestionarAsistenteService/obj
+/Business/GestionarCredencialService/bin
+/Business/GestionarCredencialService/obj
+/Business/GestionarEstacionamientoService/obj
+/Business/GestionarPublicidadService/obj
+/Business/GestionarUsuarioService/bin
+/Business/GestionarUsuarioService/obj
+/EVP.Libreria/obj

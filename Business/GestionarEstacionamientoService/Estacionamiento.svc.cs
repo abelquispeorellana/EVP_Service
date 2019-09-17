@@ -58,11 +58,23 @@ namespace GestionarEstacionamientoService
             }
         }
 
-        public EstacionamientoDOM Obtener(string IdUsuario)
+        public List<EstacionamientoDOM> Obtener(string PrecioPorHora)
         {
             try
             {
-                return (new RestClient<EstacionamientoDOM>().GET("http://sharedcss.com/evp/application/EstacionamientoService/Estacionamiento.svc/Estacionamiento/" + IdUsuario).GetAwaiter().GetResult());
+                return (new RestClient<List<EstacionamientoDOM>>().GET("http://sharedcss.com/evp/application/EstacionamientoService/Estacionamiento.svc/Estacionamiento/" + PrecioPorHora).GetAwaiter().GetResult());
+
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+        public List<EstacionamientoDOM> ObtenerPorUsuario(string IdUsuario)
+        {
+            try
+            {
+                return (new RestClient<List<EstacionamientoDOM>>().GET("http://sharedcss.com/evp/application/EstacionamientoService/Estacionamiento.svc/EstacionamientoPorUsuario/" + IdUsuario).GetAwaiter().GetResult());
 
             }
             catch (System.Exception)

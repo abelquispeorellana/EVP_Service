@@ -7,7 +7,7 @@ namespace GestionarEstacionamientoService.Dominio
     public class EstacionamientoDOM
     {
         [DataMember]
-        public int IdEstacimionamiento { get; set; }
+        public int IdEstacionamiento { get; set; }
         [DataMember]
         public int IdUsuario { get; set; }
         [DataMember]
@@ -17,9 +17,13 @@ namespace GestionarEstacionamientoService.Dominio
         public string Telefono { get; set; }
 
         [DataMember]
-        public decimal PrecioHora { get; set; }
+        public string PrecioPorHora { get; set; }
         [DataMember]
         public string Dimencion { get; set; }
+        [DataMember]
+        public int ImagenPortada { get; set; }
+        [DataMember]
+        public int ImagenLogo { get; set; }
 
     }
 }

@@ -16,20 +16,35 @@ namespace UsuarioService
 
         public UsuarioDOM Crear(UsuarioDOM Parametro)
         {
-            var DAO = new UsuarioDAO();
-            if (DAO.Obtener(Parametro.NumDocumento) != null) // Ya existe
+            try
+            {
+                var DAO = new UsuarioDAO();
+                if (DAO.Obtener(Parametro.NumDocumento) != null) // Ya existe
+                {
+                    throw new WebFaultException<RepetidoException>
+                        (
+                            new RepetidoException()
+                            {
+                                Codigo = "101",
+                                Descripcion = "El Número documento ya existe"
+                            },
+                            System.Net.HttpStatusCode.Conflict
+                        );
+                }
+                return DAO.Crear(Parametro);
+            }
+            catch (Exception ex)
             {
                 throw new WebFaultException<RepetidoException>
                     (
                         new RepetidoException()
                         {
                             Codigo = "101",
-                            Descripcion = "El Número documento ya existe"
+                            Descripcion = "Problema al registrar, vuelve a intentarlo"
                         },
                         System.Net.HttpStatusCode.Conflict
                     );
             }
-            return DAO.Crear(Parametro);
         }
 
         public string Eliminar(string IdUsuario)

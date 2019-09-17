@@ -41,11 +41,16 @@ namespace EstacionamientoService
             var DAO = new EstacionamientoDAO();
             return DAO.Modificar(Parametro);
         }
-
-        public EstacionamientoDOM Obtener(string IdUsuario)
+        public List<EstacionamientoDOM> Obtener(string PrecioPorHora)
         {
             var DAO = new EstacionamientoDAO();
-            return DAO.Obtener(IdUsuario);
+            return DAO.Obtener(PrecioPorHora);
+        }
+
+        public List<EstacionamientoDOM> ObtenerPorUsuario(string IdUsuario)
+        {
+            var DAO = new EstacionamientoDAO();
+            return DAO.ObtenerPorUsuario(IdUsuario);
         }
     }
 }
