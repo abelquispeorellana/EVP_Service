@@ -132,8 +132,7 @@ namespace UsuarioService.Persistencia
                         comando.Parameters.Add(new SqlParameter("@Apellidos", Entidad.Apellidos));
                         comando.Parameters.Add(new SqlParameter("@NumDocumento", Entidad.NumDocumento));
                         comando.Parameters.Add(new SqlParameter("@Direccion", Entidad.Direccion));
-                        comando.Parameters.Add(new SqlParameter("@Celular", Entidad.Celular));
-                        comando.Parameters.Add(new SqlParameter("@Contrasenia", Entidad.Contrasenia));
+                        comando.Parameters.Add(new SqlParameter("@Celular", Entidad.Celular)); 
                         comando.ExecuteNonQuery();
                     }
                 }
