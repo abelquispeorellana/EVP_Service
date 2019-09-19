@@ -11,7 +11,7 @@ namespace AlquilerService.Persistencia
         public AlquilerDOM Crear(AlquilerDOM Entidad)
         { 
             string sql = @"INSERT INTO dbo.Alquiler VALUES (@IdUsuario, 
-                                                            @IdEstacimionamiento, 
+                                                            @IdEstacionamiento, 
                                                             @FechaInicio, 
                                                             @FechaFin, 
                                                             @Hora,1);";
@@ -21,7 +21,7 @@ namespace AlquilerService.Persistencia
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
                     comando.Parameters.Add(new SqlParameter("@IdUsuario", Entidad.IdUsuario));
-                    comando.Parameters.Add(new SqlParameter("@IdEstacimionamiento", Entidad.IdEstacimionamiento));
+                    comando.Parameters.Add(new SqlParameter("@IdEstacionamiento", Entidad.entidad_estacionamiento.IdEstacionamiento));
                     comando.Parameters.Add(new SqlParameter("@FechaInicio", Entidad.FechaInicio));
                     comando.Parameters.Add(new SqlParameter("@FechaFin", Entidad.FechaFin));
                     comando.Parameters.Add(new SqlParameter("@Hora", Entidad.Hora)); 
@@ -30,18 +30,18 @@ namespace AlquilerService.Persistencia
             } 
             return Entidad;
         }
-        public AlquilerDOM Obtener(string IdEstacimionamiento)
+        public AlquilerDOM Obtener(string IdEstacionamiento)
         {
             AlquilerDOM Encontrado = null;
             try
             {
-                string sql = "SELECT * FROM dbo.Alquiler WHERE IdEstacimionamiento= @IdEstacimionamiento";
+                string sql = "SELECT * FROM dbo.Alquiler WHERE IdEstacionamiento= @IdEstacionamiento";
                 using (SqlConnection conexion = new SqlConnection(Local.ConnectionString))
                 {
                     conexion.Open();
                     using (SqlCommand comando = new SqlCommand(sql, conexion))
                     {
-                        comando.Parameters.Add(new SqlParameter("@IdEstacimionamiento", IdEstacimionamiento));
+                        comando.Parameters.Add(new SqlParameter("@IdEstacionamiento", IdEstacionamiento));
                         using (SqlDataReader resultado = comando.ExecuteReader())
                         {
                             if (resultado.Read())
@@ -52,7 +52,7 @@ namespace AlquilerService.Persistencia
                                     FechaFin = (string)resultado["FechaFin"],
                                     FechaInicio = (string)resultado["FechaInicio"],
                                     Hora = (int)resultado["Hora"],
-                                    IdEstacimionamiento = (int)resultado["IdEstacimionamiento"],
+                                    //IdEstacimionamiento = (int)resultado["IdEstacionamiento"],
                                     IdUsuario = (int)resultado["IdUsuario"], 
                                 };
                             }
@@ -79,8 +79,6 @@ namespace AlquilerService.Persistencia
                     using (SqlCommand comando = new SqlCommand(sql, conexion))
                     {
                         comando.Parameters.Add(new SqlParameter("@IdAlquiler", Entidad.IdAlquiler));
-                        comando.Parameters.Add(new SqlParameter("@IdUsuario", Entidad.IdUsuario));
-                        comando.Parameters.Add(new SqlParameter("@IdEstacimionamiento", Entidad.IdEstacimionamiento));
                         comando.Parameters.Add(new SqlParameter("@FechaInicio", Entidad.FechaInicio));
                         comando.Parameters.Add(new SqlParameter("@FechaFin", Entidad.FechaFin));
                         comando.Parameters.Add(new SqlParameter("@Hora", Entidad.Hora));
@@ -113,7 +111,11 @@ namespace AlquilerService.Persistencia
         public List<AlquilerDOM> Listar()
         {
             List<AlquilerDOM> Encontrados = new List<AlquilerDOM>(); 
-            string sql = "SELECT * FROM dbo.Alquiler where FlgActivo = 1";
+            string sql = @"SELECT AL.IdAlquiler, Al.IdUsuario, AL.FechaInicio, AL.FechaFin, AL.Hora,
+                            EST.IdEstacionamiento, EST.Direccion, Telefono, est.PrecioPorHora, EST.Dimencion, EST.ImagenPortada, EST.ImagenLogo  
+                            FROM Alquiler AL
+                            INNER JOIN Estacionamiento EST ON AL.IdEstacionamiento = EST.IdEstacionamiento
+                            WHERE AL.FlgActivo = 1";
             using (SqlConnection conexion = new SqlConnection(Local.ConnectionString))
             {
                 conexion.Open();
@@ -129,7 +131,57 @@ namespace AlquilerService.Persistencia
                                 FechaFin = (string)resultado["FechaFin"],
                                 FechaInicio = (string)resultado["FechaInicio"],
                                 Hora = (int)resultado["Hora"],
-                                IdEstacimionamiento = (int)resultado["IdEstacimionamiento"],
+                                entidad_estacionamiento = new EstacionamientoDOM()
+                                {
+                                    IdEstacionamiento = (int)resultado["IdEstacionamiento"],
+                                    Dimencion = (string)resultado["Dimencion"],
+                                    Telefono = (string)resultado["Telefono"],
+                                    PrecioPorHora = (string)resultado["PrecioPorHora"],
+                                    Direccion = (string)resultado["Direccion"],
+                                    ImagenPortada = (int)resultado["ImagenPortada"],
+                                    ImagenLogo = (int)resultado["ImagenLogo"],
+                                },
+                                IdUsuario = (int)resultado["IdUsuario"],
+                            });
+                        }
+                    }
+                }
+            }
+            return Encontrados;
+        }
+        public List<AlquilerDOM> AlquilerUsuario(string IdUsuario)
+        {
+            List<AlquilerDOM> Encontrados = new List<AlquilerDOM>(); 
+            string sql = @"SELECT AL.IdAlquiler, Al.IdUsuario, AL.FechaInicio, AL.FechaFin, AL.Hora,
+                            EST.IdEstacionamiento, EST.Direccion, Telefono, est.PrecioPorHora, EST.Dimencion, EST.ImagenPortada, EST.ImagenLogo  
+                            FROM Alquiler AL
+                            INNER JOIN Estacionamiento EST ON AL.IdEstacionamiento = EST.IdEstacionamiento
+                            WHERE AL.FlgActivo = 1 and Al.IdUsuario ='"  + IdUsuario + "'";
+            using (SqlConnection conexion = new SqlConnection(Local.ConnectionString))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    using (SqlDataReader resultado = comando.ExecuteReader())
+                    {
+                        while (resultado.Read())
+                        { 
+                            Encontrados.Add(new AlquilerDOM()
+                            {
+                                IdAlquiler = (int)resultado["IdAlquiler"],
+                                FechaFin = (string)resultado["FechaFin"],
+                                FechaInicio = (string)resultado["FechaInicio"],
+                                Hora = (int)resultado["Hora"],
+                                entidad_estacionamiento = new EstacionamientoDOM()
+                                {
+                                    IdEstacionamiento = (int)resultado["IdEstacionamiento"],
+                                    Dimencion = (string)resultado["Dimencion"],
+                                    Telefono = (string)resultado["Telefono"],
+                                    PrecioPorHora = (string)resultado["PrecioPorHora"],
+                                    Direccion = (string)resultado["Direccion"],
+                                    ImagenPortada = (int)resultado["ImagenPortada"],
+                                    ImagenLogo = (int)resultado["ImagenLogo"],
+                                },
                                 IdUsuario = (int)resultado["IdUsuario"],
                             });
                         }

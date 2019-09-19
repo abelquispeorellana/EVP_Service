@@ -8,7 +8,12 @@ using AlquilerService.Persistencia;
 namespace AlquilerService
 {
     public class Alquiler : IAlquiler
-    { 
+    {
+        public List<AlquilerDOM> AlquilerUsuario(string IdUsuario)
+        {
+            var DAO = new AlquilerDAO();
+            return DAO.AlquilerUsuario(IdUsuario);
+        }
 
         public AlquilerDOM Crear(AlquilerDOM Parametro)
         {

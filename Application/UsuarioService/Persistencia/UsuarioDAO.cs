@@ -79,7 +79,7 @@ namespace UsuarioService.Persistencia
             UsuarioDOM Encontrado = null;
             try
             {
-                string sql = "SELECT * FROM dbo.Usuario WHERE NumDocumento= @NumDocumento and Contrasenia = @Contrasenia";
+                string sql = "SELECT * FROM dbo.Usuario WHERE NumDocumento= @NumDocumento and Contrasenia = @Contrasenia and FlgActivo=1";
                 using (SqlConnection conexion = new SqlConnection(Local.ConnectionString))
                 {
                     conexion.Open();
@@ -153,8 +153,8 @@ namespace UsuarioService.Persistencia
                 conexion.Open();
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
-                    comando.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.Int, 0, IdUsuario)); 
-                    comando.Parameters.Add(new SqlParameter("@FlgActivo", 0));
+                    comando.Parameters.Add(new SqlParameter("@IdUsuario", IdUsuario)); 
+                    comando.Parameters.Add(new SqlParameter("@FlgActivo",  "0"));
                     comando.ExecuteNonQuery();
                 }
             }

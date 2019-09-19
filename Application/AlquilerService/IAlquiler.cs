@@ -18,7 +18,11 @@ namespace AlquilerService
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "Alquiler/{IdEstacimionamiento}", ResponseFormat = WebMessageFormat.Json)]
         AlquilerDOM Obtener(string IdEstacimionamiento);
-        
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "AlquilerUsuario/{IdUsuario}", ResponseFormat = WebMessageFormat.Json)]
+        List<AlquilerDOM> AlquilerUsuario(string IdUsuario);
+
         [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "Alquiler", ResponseFormat = WebMessageFormat.Json)]
         AlquilerDOM Modificar(AlquilerDOM Parametro);

@@ -12,7 +12,7 @@ namespace AlquilerService.Dominio
         [DataMember]
         public int IdUsuario{ get; set; }
         [DataMember]
-        public int IdEstacimionamiento { get; set; }
+        public EstacionamientoDOM entidad_estacionamiento { get; set; }
 
         [DataMember]
         public string FechaInicio { get; set; }
