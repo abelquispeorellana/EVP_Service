@@ -15,6 +15,12 @@ namespace AlquilerService
             return DAO.AlquilerUsuario(IdUsuario);
         }
 
+        public List<AlquilerDOM> AlquilerDuenio(string IdUsuario)
+        {
+            var DAO = new AlquilerDAO();
+            return DAO.AlquilerDuenio(IdUsuario);
+        }
+
         public AlquilerDOM Crear(AlquilerDOM Parametro)
         {
             var DAO = new AlquilerDAO();

@@ -21,6 +21,8 @@ namespace AlquilerService.Dominio
         public string FechaFin { get; set; }
         [DataMember]
         public int Hora { get; set; } 
+        [DataMember]
+        public string KeyMovil { get; set; }
 
     }
 }

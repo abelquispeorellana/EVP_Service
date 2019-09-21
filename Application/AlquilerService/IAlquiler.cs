@@ -24,6 +24,10 @@ namespace AlquilerService
         List<AlquilerDOM> AlquilerUsuario(string IdUsuario);
 
         [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "AlquilerDuenio/{IdUsuario}", ResponseFormat = WebMessageFormat.Json)]
+        List<AlquilerDOM> AlquilerDuenio(string IdUsuario);
+
+        [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "Alquiler", ResponseFormat = WebMessageFormat.Json)]
         AlquilerDOM Modificar(AlquilerDOM Parametro);
 

@@ -14,7 +14,9 @@ namespace AlquilerService.Persistencia
                                                             @IdEstacionamiento, 
                                                             @FechaInicio, 
                                                             @FechaFin, 
-                                                            @Hora,1);";
+                                                            @Hora,
+                                                            1,
+                                                            @KeyMovil);";
             using (SqlConnection conexion = new SqlConnection(Local.ConnectionString))
             {
                 conexion.Open();
@@ -25,6 +27,7 @@ namespace AlquilerService.Persistencia
                     comando.Parameters.Add(new SqlParameter("@FechaInicio", Entidad.FechaInicio));
                     comando.Parameters.Add(new SqlParameter("@FechaFin", Entidad.FechaFin));
                     comando.Parameters.Add(new SqlParameter("@Hora", Entidad.Hora)); 
+                    comando.Parameters.Add(new SqlParameter("@KeyMovil", Entidad.KeyMovil)); 
                     comando.ExecuteNonQuery();
                 }
             } 
@@ -149,14 +152,15 @@ namespace AlquilerService.Persistencia
             }
             return Encontrados;
         }
+
         public List<AlquilerDOM> AlquilerUsuario(string IdUsuario)
         {
             List<AlquilerDOM> Encontrados = new List<AlquilerDOM>(); 
-            string sql = @"SELECT AL.IdAlquiler, Al.IdUsuario, AL.FechaInicio, AL.FechaFin, AL.Hora,
+            string sql = @"SELECT AL.IdAlquiler, Al.IdUsuario, AL.FechaInicio, AL.FechaFin, AL.Hora, AL.KeyMovil,
                             EST.IdEstacionamiento, EST.Direccion, Telefono, est.PrecioPorHora, EST.Dimencion, EST.ImagenPortada, EST.ImagenLogo  
                             FROM Alquiler AL
                             INNER JOIN Estacionamiento EST ON AL.IdEstacionamiento = EST.IdEstacionamiento
-                            WHERE AL.FlgActivo = 1 and Al.IdUsuario ='"  + IdUsuario + "'";
+                            WHERE AL.FlgActivo = 1 and Al.IdUsuario ='" + IdUsuario + "'";
             using (SqlConnection conexion = new SqlConnection(Local.ConnectionString))
             {
                 conexion.Open();
@@ -183,6 +187,50 @@ namespace AlquilerService.Persistencia
                                     ImagenLogo = (int)resultado["ImagenLogo"],
                                 },
                                 IdUsuario = (int)resultado["IdUsuario"],
+                                KeyMovil = (string)(resultado["KeyMovil"] ?? ""),
+                            });
+                        }
+                    }
+                }
+            }
+            return Encontrados;
+        }
+
+        public List<AlquilerDOM> AlquilerDuenio(string IdUsuario)
+        {
+            List<AlquilerDOM> Encontrados = new List<AlquilerDOM>();
+            string sql = @"SELECT AL.IdAlquiler, Al.IdUsuario, AL.FechaInicio, AL.FechaFin, AL.Hora, AL.KeyMovil,
+                            EST.IdEstacionamiento, EST.Direccion, Telefono, est.PrecioPorHora, EST.Dimencion, EST.ImagenPortada, EST.ImagenLogo  
+                            FROM Alquiler AL
+                            INNER JOIN Estacionamiento EST ON AL.IdEstacionamiento = EST.IdEstacionamiento
+                            WHERE AL.FlgActivo = 1 and EST.IdUsuario ='" + IdUsuario + "'";
+            using (SqlConnection conexion = new SqlConnection(Local.ConnectionString))
+            {
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    using (SqlDataReader resultado = comando.ExecuteReader())
+                    {
+                        while (resultado.Read())
+                        {
+                            Encontrados.Add(new AlquilerDOM()
+                            {
+                                IdAlquiler = (int)resultado["IdAlquiler"],
+                                FechaFin = (string)resultado["FechaFin"],
+                                FechaInicio = (string)resultado["FechaInicio"],
+                                Hora = (int)resultado["Hora"],
+                                entidad_estacionamiento = new EstacionamientoDOM()
+                                {
+                                    IdEstacionamiento = (int)resultado["IdEstacionamiento"],
+                                    Dimencion = (string)resultado["Dimencion"],
+                                    Telefono = (string)resultado["Telefono"],
+                                    PrecioPorHora = (string)resultado["PrecioPorHora"],
+                                    Direccion = (string)resultado["Direccion"],
+                                    ImagenPortada = (int)resultado["ImagenPortada"],
+                                    ImagenLogo = (int)resultado["ImagenLogo"],
+                                },
+                                IdUsuario = (int)resultado["IdUsuario"],
+                                KeyMovil = (string)(resultado["KeyMovil"] ?? ""),
                             });
                         }
                     }
