@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Dominio\AlquilerDOM.cs" />
     <Compile Include="Dominio\EstacionamientoDOM.cs" />
+    <Compile Include="Dominio\UsuarioDOM.cs" />
     <Compile Include="Errores\RepetidoException.cs" />
     <Compile Include="IAlquiler.cs" />
     <Compile Include="Local.cs" />
