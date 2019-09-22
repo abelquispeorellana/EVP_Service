@@ -47,6 +47,12 @@ namespace EstacionamientoService
             return DAO.Obtener(PrecioPorHora);
         }
 
+        public List<EstacionamientoMapaDOM> ObtenerMapa(string IdEstacionamiento)
+        {
+            var DAO = new EstacionamientoMapaDAO();
+            return DAO.Obtener(IdEstacionamiento);
+        }
+
         public List<EstacionamientoDOM> ObtenerPorUsuario(string IdUsuario)
         {
             var DAO = new EstacionamientoDAO();

@@ -13,6 +13,8 @@ namespace ValoracionService
     [ServiceContract]
     public interface IValoracion
     {
+        //http://qaru.site/questions/14461248/wcf-service-to-consume-multipart-data-from-android
+        //https://www.baeldung.com/guide-to-okhttp
 
         [FaultContract(typeof(RepetidoException))]
         [OperationContract]

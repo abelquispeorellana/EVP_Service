@@ -24,6 +24,10 @@ namespace EstacionamientoService
         List<EstacionamientoDOM> ObtenerPorUsuario(string IdUsuario);
 
         [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "EstacionamientoMapa/{IdEstacionamiento}", ResponseFormat = WebMessageFormat.Json)]
+        List<EstacionamientoMapaDOM> ObtenerMapa(string IdEstacionamiento);
+
+        [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "Estacionamiento", ResponseFormat = WebMessageFormat.Json)]
         EstacionamientoDOM Modificar(EstacionamientoDOM Parametro);
 
