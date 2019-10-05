@@ -33,7 +33,7 @@ namespace UsuarioService.Persistencia
                     comando.ExecuteNonQuery();
                 }
             } 
-            return Entidad;
+            return UsuarioAutenticar(Entidad.NumDocumento, Entidad.Contrasenia);
         }
         public UsuarioDOM Obtener(string NumDocumento)
         {
